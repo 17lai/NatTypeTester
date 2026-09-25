@@ -25,7 +25,7 @@ public partial class RFC5780ViewModel : ViewModelBase
 	[Reactive]
 	public partial TransportType TransportType { get; set; }
 
-	[ObservableAsProperty]
+	[ObservableAsProperty(ReadOnly = true)]
 	public partial bool IsTesting { get; }
 
 	public RFC5780ViewModel()

@@ -13,7 +13,7 @@ public partial class RFC3489ViewModel : ViewModelBase
 
 	public IReadOnlyList<string> LocalEndPoints => AppLocator.Current.GetRequiredService<ILocalEndPointProvider>().GetLocalEndPoints();
 
-	[ObservableAsProperty]
+	[ObservableAsProperty(ReadOnly = true)]
 	public partial bool IsTesting { get; }
 
 	public RFC3489ViewModel()
